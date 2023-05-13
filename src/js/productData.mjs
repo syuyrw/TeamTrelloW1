@@ -12,6 +12,7 @@ export function getData(category = "tents") {
     .then(function(data) { return data; }); //(data) => data)
 }
 
+
 export async function findProductById(id) {
   const products = await getData();
   return products.find(function(item) { return item.Id === id; }); // (item) => item.Id === id
